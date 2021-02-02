@@ -35,6 +35,7 @@ const drawRectangle = (startX, startY, rectWidth, rectHeight) => {
   ctx.strokeStyle = '#000';
   ctx.lineWidth = 5;
   ctx.beginPath();
+  ctx.fillText(`Rectangle coordinates: X:${startX} Y:${startY}`, startX ,startY - 10);
   ctx.rect(startX, startY, rectWidth, rectHeight);
   ctx.stroke();
 };
