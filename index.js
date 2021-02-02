@@ -32,7 +32,9 @@ clearCanvasBtn.addEventListener('click', () => {
 });
 
 const drawRectangle = (startX, startY, rectWidth, rectHeight) => {
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = '#000'
+  ctx.fillStyle = "#000";
+  ctx.font = "14px Arial";
   ctx.lineWidth = 5;
   ctx.beginPath();
   ctx.fillText(`Rectangle coordinates: X:${startX} Y:${startY}`, startX ,startY - 10);
