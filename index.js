@@ -1,6 +1,7 @@
 const canvas = document.querySelector('canvas');
-canvas.height = document.querySelector('body').clientHeight - 5;
-canvas.width = document.querySelector('body').clientWidth - 5;
+const rect = canvas.getBoundingClientRect();
+canvas.height = document.querySelector('body').clientHeight;
+canvas.width = document.querySelector('body').clientWidth;
 const ctx = canvas.getContext('2d');
 let down = false;
 let startX = 0;
@@ -29,7 +30,7 @@ const draw = (mouseX, mouseY) => {
 };
 
 canvas.addEventListener('mousemove', (event) => {
-  const mouseX = event.offsetX;
-  const mouseY = event.offsetY;
+  const mouseX = event.offsetX - rect.left;
+  const mouseY = event.offsetY - rect.top;
   draw(mouseX, mouseY);
 });
