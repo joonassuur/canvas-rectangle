@@ -1,7 +1,8 @@
 const canvas = document.querySelector('canvas');
 const rect = canvas.getBoundingClientRect();
-canvas.height = document.querySelector('body').clientHeight;
-canvas.width = document.querySelector('body').clientWidth;
+canvas.height = document.querySelector('img').clientHeight;
+canvas.width = document.querySelector('img').clientWidth;
+
 const ctx = canvas.getContext('2d');
 let down = false;
 let startX = 0;
