@@ -1,16 +1,16 @@
 body {
     margin: 0;
 }
-#cvs {
+#picture-canvas-container {
+  display: inline-block;
+}
+#picture-canvas-container canvas {
   width: 100%;
   cursor: crosshair;
   position: relative;
   z-index: 2;
 }
-#picture-container {
-  display: inline-block;
-}
-#picture-container img {
+#picture-canvas-container img {
   z-index: 1;
   width: 1000px;
   height: 600px;
