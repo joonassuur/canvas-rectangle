@@ -1,4 +1,4 @@
-const rectangleDrawingApp = (canvasContainer, clearCanvasButton) => {
+export const drawRectangles = ((canvasContainer, clearCanvasButton) => {
   const canvas = document.querySelector(`${canvasContainer} canvas`);
   canvas.height = document.querySelector(`${canvasContainer} img`).clientHeight;
   canvas.width = document.querySelector(`${canvasContainer} img`).clientWidth;
@@ -67,6 +67,4 @@ const rectangleDrawingApp = (canvasContainer, clearCanvasButton) => {
     const mouseY = event.offsetY - rect.top;
     calculateCoordinates(mouseX, mouseY);
   });
-};
-// params: query selectors for: 1) picture and canvas container, 2) clear canvas button
-rectangleDrawingApp('#picture-canvas-container', '#clear-canvas');
+});
