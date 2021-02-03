@@ -26,7 +26,7 @@ export const drawRectangles = ((canvasContainer, clearCanvasButton) => {
       rectHeight,
     });
   });
-  clearCanvasBtn.addEventListener('click', () => {
+  clearCanvasBtn?.addEventListener('click', () => {
     // clear rectangles
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     rectangles.length = 0;
